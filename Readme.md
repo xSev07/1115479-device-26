@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Artemy Dmitrochenko](https://up.htmlacademy.ru/htmlcss/26/user/1115479).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/id198062).
 
 ---
 
