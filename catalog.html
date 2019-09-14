@@ -7,7 +7,8 @@
   <body>
     <header>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <input type="search" placeholder="Поиск по сайту">
+        <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+        <input type="search" id="site-search" placeholder="Поиск по сайту">
       </form>
       <ul>
         <li>
@@ -87,34 +88,24 @@
             <legend>Цвет</legend>
             <ul>
               <li>
-                <label>
-                  <input type="checkbox" name="black" checked>
-                  Черный
-                </label>
+                <input type="checkbox" name="color" id="color-black" value="black" checked>
+                <label for="color-black">Черный</label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="white">
-                  Белый
-                </label>
+                <input type="checkbox" name="color" id="color-white" value="white">
+                <label for="color-white">Белый</label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="blue" checked>
-                  Синий
-                </label>
+                <input type="checkbox" name="color" id="color-blue" value="blue" checked>
+                <label for="color-blue">Синий</label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="red" checked>
-                  Красный
-                </label>
+                <input type="checkbox" name="color" id="color-red" value="red" checked>
+                <label for="color-red">Красный</label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="pink">
-                  Розовый
-                </label>
+                <input type="checkbox" name="color" id="color-pink" value="pink">
+                <label for="color-pink">Розовый</label>
               </li>
             </ul>
           </fieldset>
@@ -122,16 +113,12 @@
             <legend>Bluetooth</legend>
             <ul>
               <li>
-                <label>
-                  <input type="radio" name="bluetooth" value="yes" checked>
-                  Есть
-                </label>
+                <input type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
+                <label for="bluetooth-yes">Есть</label>
               </li>
               <li>
-                <label>
-                  <input type="radio" name="bluetooth" value="no">
-                  Нет
-                </label>
+                <input type="radio" name="bluetooth" id="bluetooth-no" value="no">
+                <label for="bluetooth-no">Нет</label>
               </li>
             </ul>
           </fieldset>
