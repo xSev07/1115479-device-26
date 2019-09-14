@@ -6,8 +6,8 @@
   </head>
   <body>
     <header>
-      <form action="#" method="get">
-        <input type="text" name="search" value="Поиск">
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <input type="search" placeholder="Поиск по сайту">
       </form>
       <ul>
         <li>
@@ -78,7 +78,65 @@
       </ul>
       <section>
         <h2>Фильтр:</h2>
-        <!-- форма фильтра -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label>
+            Стоимость
+            <!-- выбор цены -->
+          </label>
+          <fieldset>
+            <legend>Цвет</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="black" checked>
+                  Черный
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="white">
+                  Белый
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="blue" checked>
+                  Синий
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="red" checked>
+                  Красный
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="pink">
+                  Розовый
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="bluetooth" value="yes" checked>
+                  Есть
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="bluetooth" value="no">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <div>
         <span>Сортировка:</span>
