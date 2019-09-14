@@ -6,8 +6,8 @@
   </head>
   <body>
     <header>
-      <form action="#" method="get">
-        <input type="text" name="search" value="Поиск">
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <input type="search" placeholder="Поиск по сайту">
       </form>
       <ul>
         <li>
@@ -227,8 +227,41 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="map.html"><img src="img/map.jpg" alt="Как добраться" width="560" height="222"></a>
+        <a href="map.html"><img src="img/map.jpg" width="560" height="222"
+          alt="Офис компании по адресу улица Строителей, 15"></a>
         <a href="">Напишите нам</a>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <form class="write_us" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label>
+              Ваше имя:
+              <input type="text" name="name" placeholder="Имя Фамилия" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Ваш e-mail:
+              <input type="email" name="email" placeholder="email@example.com" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Текст письма:
+              <textarea name="message" rows="8" cols="80" placeholder="В свободной форме" required></textarea>
+            </label>
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
+        <button type="button">Закрыть</button>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+          <img src="img/map.jpg"  width="560" height="222" alt="Офис компании по адресу
+            улица Строителей, 15">
+        </p>
       </section>
     </main>
     <footer>
