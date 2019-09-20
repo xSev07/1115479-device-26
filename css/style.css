@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 300;
   src: local('Gilroy'),
-       url('/fonts/gilroylight.woff2') format('woff2'),
-       url('/fonts/gilroylight.woff') format('woff');
+       url('../fonts/gilroylight.woff2') format('woff2'),
+       url('../fonts/gilroylight.woff') format('woff');
 }
 
 @font-face {
@@ -12,8 +12,8 @@
   font-style: normal;
   font-weight: 800;
   src: local('Gilroy'),
-       url('/fonts/gilroyextrabold.woff2') format('woff2'),
-       url('/fonts/gilroyextrabold.woff') format('woff');
+       url('../fonts/gilroyextrabold.woff2') format('woff2'),
+       url('../fonts/gilroyextrabold.woff') format('woff');
 }
 
 @font-face {
@@ -21,8 +21,8 @@
   font-style: normal;
   font-weight: 300;
   src: local('Opensans'),
-       url('/fonts/opensanslight.woff2') format('woff2'),
-       url('/fonts/opensanslight.woff') format('woff');
+       url('../fonts/opensanslight.woff2') format('woff2'),
+       url('../fonts/opensanslight.woff') format('woff');
 }
 
 @font-face {
@@ -30,26 +30,37 @@
   font-style: normal;
   font-weight: 400;
   src: local('Opensans'),
-       url('/fonts/opensans.woff2') format('woff2'),
-       url('/fonts/opensans.woff') format('woff');
+       url('../fonts/opensans.woff2') format('woff2'),
+       url('../fonts/opensans.woff') format('woff');
 }
 
 body {
   margin: 0;
   padding: 0;
 
-  font-family: "Gilroy", Arial Black, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 800;
-  color: rgb(0, 0, 0);
+  font-family: "Open Sans", Trebuchet MS, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
 
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
 }
 
 .main-nav {
@@ -95,10 +106,22 @@ a {
 }
 
 .site-nav {
+  font-family: "Gilroy", Arial Black, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+
   list-style: none;
 }
 
 .catalog-nav {
+  font-family: "Open Sans", Trebuchet MS, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #464646;
+
   list-style: none;
 }
 
@@ -116,10 +139,6 @@ a {
 
 .partners-list {
   list-style: none;
-}
-
-.delivery-list {
-  /*list-style: none;*/
 }
 
 .social-list {
@@ -171,21 +190,81 @@ a {
 }
 
 .catalog-nav {
-  font-family: "Open Sans", Trebuchet MS, sans-serif;
-  font-size: 15px;
-  line-height: 36px;
-  font-weight: 300;
   text-transform: none;
 }
 
-.section-header {
-  font-size: 47px;
-  line-height: 48px;
+.services-section {
+  background-color: #e5e5e5;
 }
 
-.details {
-  font-family: "Open Sans", Trebuchet MS, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 300;
+.about-section h2 {
+  font-family: "Gilroy", Arial Black, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.contacts-section h2 {
+  font-family: "Gilroy", Arial Black, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.delivery-list {
+  font-family: "Gilroy", Arial Black, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.main-footer {
+  background-color: #464646;
+  color: #ffffff;
+}
+
+.nav-footer {
+  color: #ffffff;
+}
+
+.social-list a {
+  opacity: 0.3;
+}
+
+.social-list a:hover,
+.social-list a:focus {
+  opacity: 0.6;
+}
+
+.social-list a:active {
+  opacity: 0.1;
+}
+
+.user-footer a {
+  opacity: 0.7;
+}
+
+.user-footer a:hover,
+.user-footer a:focus {
+  opacity: 1;
+}
+
+.user-footer a:active {
+  opacity: 0.3;
+}
+
+.purchase-footer a {
+  opacity: 0.7;
+}
+
+.purchase-footer a:hover,
+.purchase-footer a:focus {
+  opacity: 1;
+}
+
+.purchase-footer a:active {
+  opacity: 0.3;
 }
