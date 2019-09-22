@@ -116,7 +116,7 @@ a {
   opacity: 0.3;
 }
 
-.main-nav-menu {
+.main-nav-list {
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -127,7 +127,7 @@ a {
   list-style: none;
 }
 
-.main-nav-submenu {
+.main-nav-sublist {
   font-family: "Open Sans", "Trebuchet MS", sans-serif;
   font-size: 15px;
   line-height: 36px;
@@ -141,13 +141,13 @@ a {
   opacity: 0.6;
 }
 
-.main-nav-menu a:hover,
-.main-nav-menu a:focus {
+.main-nav-list a:hover,
+.main-nav-list a:focus {
   opacity: 0.6;
 }
 
-.main-nav-submenu a:hover,
-.main-nav-submenu a:focus {
+.main-nav-sublist a:hover,
+.main-nav-sublist a:focus {
   opacity: 0.6;
 }
 
@@ -160,11 +160,11 @@ a {
   opacity: 0.3;
 }
 
-.main-nav-menu a:active {
+.main-nav-list a:active {
   opacity: 0.3;
 }
 
-.main-nav-submenu a:active {
+.main-nav-sublist a:active {
   opacity: 0.3;
 }
 
@@ -176,11 +176,11 @@ a {
   opacity: 0.3;
 }
 
-.main-nav-menu {
+.main-nav-list {
   text-transform: uppercase;
 }
 
-.main-nav-submenu {
+.main-nav-sublist {
   text-transform: none;
 }
 
@@ -381,6 +381,10 @@ active устанавливается JS на активные варианты 
   font-size: 14px;
   line-height: 40px;
   color: #000000;
+}
+
+.filter-input:disabled + label {
+  color: #a6a6a6;
 }
 
 .sorting span {
