@@ -82,8 +82,21 @@ a {
   border: none;
 }
 
-.main-nav {
+.main-header {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 40px auto 35px;
+
   background-color: #f7e296;
+}
+
+.row {
+  display: flex;
+}
+
+.row ul {
+  display: flex;
 }
 
 .site-search {
@@ -117,6 +130,8 @@ a {
 }
 
 .main-nav-list {
+  display: flex;
+
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -128,6 +143,8 @@ a {
 }
 
 .main-nav-sublist {
+  display: flex;
+
   font-family: "Open Sans", "Trebuchet MS", sans-serif;
   font-size: 15px;
   line-height: 36px;
