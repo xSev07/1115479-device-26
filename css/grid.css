@@ -1,0 +1,23 @@
+/* ----- Сеточные стили ----- */
+
+
+html,
+body {
+  min-width: 1440px;
+  min-height: 2795px;
+}
+
+body {
+  /* Временно для сетки */
+  background-image: url('../img/1device-index.jpg');
+  background-size: 1440px auto;
+  background-repeat: no-repeat;
+}
+
+.main-header {
+  margin-top: 40px;
+  margin-bottom: 75px;
+
+  /* Временно для сетки */
+  min-height: 295px;
+}

@@ -88,10 +88,6 @@ a {
   padding: 0 10px;
 }
 
-.header-wrapper {
-  padding: 50px 60px 40px;
-}
-
 .main-header {
   display: flex;
   flex-direction: column;
@@ -99,6 +95,10 @@ a {
   margin: 40px auto 35px;
 
   background-color: #f7e296;
+}
+
+.header-wrapper {
+  padding: 50px 60px 40px;
 }
 
 .row {
@@ -142,6 +142,7 @@ a {
 
 .main-nav-list {
   display: flex;
+  position: relative;
   padding: 0;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
@@ -157,6 +158,7 @@ a {
 
 .main-nav-sublist {
   display: flex;
+  position: absolute;
 
   font-family: "Open Sans", "Trebuchet MS", sans-serif;
   font-size: 15px;
@@ -317,15 +319,29 @@ a {
   align-items: flex-start;
 }
 
+.footer-wrapper .column:first-child > * {
+  align-items: flex-start;
+  padding-bottom: 40px;
+}
+
 .footer-wrapper .column:nth-child(2) {
   align-items: center;
   justify-content: flex-end;
-  flex-wrap: nowrap;
-  padding-top: 30px;
+}
+
+.footer-wrapper .column:nth-child(2) > * {
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  margin: 0;
 }
 
 .footer-wrapper .column:last-child {
   align-items: flex-end;
+}
+
+.footer-wrapper .column:last-child > * {
+  padding-bottom: 40px;
 }
 
 .column ul {
@@ -404,6 +420,8 @@ a {
 
 /* catalog.html */
 .catalog-page h1 {
+  margin-bottom: 29px;
+
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -420,11 +438,17 @@ active устанавливается JS на активные варианты 
 }
 
 .breadcrumbs {
+  display: flex;
+  margin-bottom: 50px;
+
   font-size: 14px;
   line-height: 24px;
 }
 
 .filter {
+  padding-right: 68px;
+  padding-left: 60px;
+  width: 210px;
   background-color: #efefef;
 }
 
@@ -443,6 +467,8 @@ active устанавливается JS на активные варианты 
 }
 
 .filter legend {
+  margin-bottom: 30px;
+
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -460,6 +486,16 @@ active устанавливается JS на активные варианты 
   color: #a6a6a6;
 }
 
+.catalog-columns {
+  width: 760px;
+  padding-left: 72px;
+}
+
+.sorting {
+  display: flex;
+  align-items: center;
+}
+
 .sorting span {
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 16px;
@@ -468,6 +504,10 @@ active устанавливается JS на активные варианты 
   color: #000000;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.sorting ul {
+  display: flex;
 }
 
 .sorting-type a {
@@ -501,6 +541,10 @@ active устанавливается JS на активные варианты 
   opacity: 1;
 }
 
+.catalog-section {
+  display: flex;
+}
+
 .items-list {
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 16px;
@@ -513,6 +557,10 @@ active устанавливается JS на активные варианты 
   line-height: 24px;
   font-weight: 800;
   color: #000000;
+}
+
+.catalog-item {
+  width: 360px;
 }
 
 .add-comparison {
@@ -550,3 +598,50 @@ active устанавливается JS на активные варианты 
 .pagination-button a {
   opacity: 1;
 }
+
+/* ----- Сеточные стили ----- */
+
+
+html,
+body {
+  min-width: 1440px;
+  min-height: 2795px;
+}
+
+body {
+  /* Временно для сетки */
+/*  background-image: url('../img/1device-index.jpg');
+  background-size: 1440px auto;
+  background-repeat: no-repeat;
+  */
+}
+/*
+.main-header {
+  margin-top: 40px;
+  margin-bottom: 75px;
+}
+
+.logo {
+  width: 163px;
+  height: 35px;
+}
+
+.user-nav {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.purchase-nav {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+*/
