@@ -46,11 +46,11 @@ body {
 
   background-color: #ffffff;
 
-
+/*
   background-image: url("../img/1device-index.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-
+*/
 }
 
 a {
@@ -441,7 +441,7 @@ a {
 
 .about-section h2 {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 43px;
   margin-left: -1px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
@@ -460,6 +460,7 @@ a {
   margin: 0;
   margin-bottom: 60px;
   padding: 0;
+  padding-top: 5px;
   padding-left: 35px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
@@ -467,6 +468,8 @@ a {
   line-height: 40px;
   font-weight: 800;
   color: #000000;
+
+  list-style: none;
 }
 
 .contacts-section {
@@ -513,6 +516,7 @@ a {
 
 .footer-wrapper .column:first-child {
   align-items: flex-start;
+  width: 360px;
 }
 
 .footer-wrapper .column:first-child > * {
@@ -523,21 +527,16 @@ a {
 .footer-wrapper .column:nth-child(2) {
   align-items: center;
   justify-content: flex-end;
-}
-
-.footer-wrapper .column:nth-child(2) > * {
-  align-items: center;
-  justify-content: flex-end;
-  margin: 0;
-  margin-bottom: 43px;
+  width: 440px;
 }
 
 .footer-wrapper .column:last-child {
   align-items: flex-end;
+  width: 360px;
 }
 
 .footer-wrapper .column:last-child > * {
-  padding-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .footer-wrapper ul {
@@ -546,10 +545,26 @@ a {
 }
 
 .nav-footer {
+  margin: 0;
+  margin-bottom: 63px;
+
   color: #ffffff;
 }
 
+.nav-footer a {
+  display: inline-block;
+  margin-right: 22px;
+}
+
+.social-list {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
 .social-list a {
+  width: 32px;
+  height: 32px;
+
   opacity: 0.3;
 }
 
