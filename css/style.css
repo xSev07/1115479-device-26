@@ -34,6 +34,9 @@
        url("../fonts/opensans.woff") format("woff");
 }
 
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
 body {
   margin: 0;
   padding: 0;
@@ -46,12 +49,12 @@ body {
 
   background-color: #ffffff;
 
-
-  background-image: url("../img/1device-index.jpg");
-
 /*
-  background-image: url("../img/1device-catalog.jpg");
+  background-image: url("../img/1device-index.jpg");
 */
+
+  background-image: url("../img/1device-catalog.jpg");
+
   background-position: top center;
   background-repeat: no-repeat;
 
@@ -274,8 +277,6 @@ a {
 .promo-product {
   display: flex;
   justify-content: space-between;
-
-  padding-left: 15px;
 }
 
 .promo-section h3 {
@@ -301,18 +302,12 @@ a {
   text-align: center;
 }
 
-.promo-wrapper {
-  width: 580px;
-  margin-right: 80px;
-}
-
 .promo-description {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-top: 48px;
+  width: 580px;
   min-height: 495px;
-  margin-left: 50px;
 }
 
 .promo-description .product-details-button {
@@ -643,10 +638,18 @@ a {
   opacity: 0.3;
 }
 
-/* catalog.html */
+/*
+-----------------------------------------------
+catalog.html
+-------------------------------------------------
+*/
+.cataloh-header {
+  margin-bottom: 33px;
+}
+
 .catalog-page h1 {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 24px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 47px;
@@ -656,38 +659,26 @@ a {
 }
 
 .breadcrumbs-wrapper {
-  margin-left: 60px;
-  padding-top: 10px;
-}
-
-/*
-active устанавливается JS на активные варианты сортировки и у активных страниц
-каталога
-*/
-.catalog-page .active {
-  opacity: 1;
-}
-
-.breadcrumbs {
-  display: flex;
-  margin-bottom: 50px;
-
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.filter {
-  padding-right: 68px;
   padding-left: 60px;
-  width: 210px;
-  background-color: #efefef;
 }
 
-.filter fieldset {
-  border: none;
+.sorting-wrapper {
+  background: linear-gradient(to right, #dbdbdb 33.3%, #ebebeb 33.3%);
 }
 
-.filter h2 {
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+
+.sorting h2 {
+  margin: 0;
+  margin-left: 59px;
+  padding: 0;
+
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -697,37 +688,9 @@ active устанавливается JS на активные варианты 
   text-transform: uppercase;
 }
 
-.filter legend {
-  margin-bottom: 30px;
-
-  font-family: "Gilroy", "Arial Black", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 800;
-  color: #000000;
-}
-
-.filter label {
-  font-size: 14px;
-  line-height: 40px;
-  color: #000000;
-}
-
-.filter-input:disabled + label {
-  color: #a6a6a6;
-}
-
-.catalog-columns {
-  width: 760px;
-  padding-left: 72px;
-}
-
-.sorting {
-  display: flex;
-  align-items: center;
-}
-
 .sorting span {
+  margin-left: 255px;
+
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -739,6 +702,10 @@ active устанавливается JS на активные варианты 
 
 .sorting ul {
   display: flex;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
 }
 
 .sorting-type a {
@@ -772,15 +739,80 @@ active устанавливается JS на активные варианты 
   opacity: 1;
 }
 
+/*
+active устанавливается JS на активные варианты сортировки и у активных страниц
+каталога
+*/
+.catalog-page .active {
+  opacity: 1;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.catalog-columns-wrapper {
+  background: linear-gradient(to right, #efefef 33.3%, #ffffff 33.3%);
+}
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  margin: 0;
+  padding: 0;
+  padding: 0 5px;
+  width: 210px;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  margin-bottom: 30px;
+
+  font-family: "Gilroy", "Arial Black", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.filter label {
+  font-size: 14px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.filter-input:disabled + label {
+  color: #a6a6a6;
+}
+
 .catalog-section {
   display: flex;
+  width: 760px;
 }
 
 .items-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
+
+  list-style: none;
 }
 
 .items-list h3 {
@@ -791,7 +823,12 @@ active устанавливается JS на активные варианты 
 }
 
 .catalog-item {
+  margin: 0;
   width: 360px;
+}
+
+.catalog-item:nth-of-type(odd) {
+  margin-right: 40px;
 }
 
 .add-comparison {
