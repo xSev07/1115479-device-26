@@ -100,8 +100,9 @@ a {
 }
 
 .container {
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .main-header {
@@ -269,9 +270,8 @@ a {
 }
 .promo-section {
   margin-bottom: 95px;
-/*
+
   background: linear-gradient(to bottom, #f7e296 110px, #ffffff 110px);
-  */
 }
 
 .promo-product {
@@ -429,6 +429,7 @@ a {
 .partners-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -451,7 +452,6 @@ a {
 .about-section h2 {
   margin: 0;
   margin-bottom: 43px;
-  margin-left: -1px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 47px;
@@ -643,7 +643,7 @@ a {
 catalog.html
 -------------------------------------------------
 */
-.cataloh-header {
+.catalog-header {
   margin-bottom: 33px;
 }
 
@@ -801,6 +801,7 @@ active устанавливается JS на активные варианты 
 .catalog-section {
   display: flex;
   width: 760px;
+  margin-bottom: -6px;
 }
 
 .items-list {
@@ -820,7 +821,7 @@ active устанавливается JS на активные варианты 
 
 .catalog-item {
   margin: 0;
-  padding-bottom: 44px;
+  margin-bottom: 44px;
   width: 360px;
 }
 
@@ -884,7 +885,6 @@ active устанавливается JS на активные варианты 
   display: flex;
   justify-content: center;
   margin: 0;
-  margin-top: -6px;
   margin-left: auto;
   padding: 0 30px;
   width: 760px;
@@ -897,6 +897,7 @@ active устанавливается JS на активные варианты 
 
 .pagination a {
   display: inline-block;
+  vertical-align: middle;
   padding: 23px 15px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
