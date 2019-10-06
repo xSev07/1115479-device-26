@@ -883,7 +883,6 @@ active устанавливается JS на активные варианты 
 
 .pagination {
   display: flex;
-  justify-content: center;
   margin: 0;
   margin-left: auto;
   padding: 0 30px;
