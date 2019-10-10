@@ -49,16 +49,16 @@ body {
 
   background-color: #ffffff;
 
-/*
+
   background-image: url("../img/1device-index.jpg");
 
-/*
-  background-image: url("../img/1device-catalog.jpg");
-*/
-/*
   background-position: top center;
   background-repeat: no-repeat;
-*/
+
+  /*
+    background-image: url("../img/1device-catalog.jpg");
+  */
+
 }
 
 a {
@@ -446,22 +446,53 @@ img {
 .popular-list a {
   display: block;
   width: 160px;
-  height: 245px;
   padding-top: 193px;
-
-  background: linear-gradient(to bottom, #f7e296 160px, #ffffff 160px);
 }
 
 .popular-list a::before {
   content: "";
   position: absolute;
-  width: 97px;
-  height: 55px;
-  top: 52px;
-  left: 31px;
 
+  width: 160px;
+  height: 160px;
+  top: 0;
+  left: 0;
+
+  background-color: #f7e296;
   background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.popular-list .popular-virtual::before {
+  background-position-X: 30px;
   background-image: url("../img/popular-1.svg");
+}
+
+.popular-list .popular-monopods::before {
+  background-position-Y: 40px;
+  background-image: url("../img/popular-2.svg");
+}
+
+.popular-list .popular-cameras::before {
+  background-position-X: 48px;
+  background-image: url("../img/popular-3.svg");
+}
+
+.popular-list .popular-bracelet::before {
+  background-image: url("../img/popular-4.svg");
+}
+
+.popular-list .popular-watch::before {
+  background-position-x: 54px;
+  background-position-y: 32px;
+  background-image: url("../img/popular-5.svg");
+}
+
+.popular-list .popular-quadrocopters::before {
+  background-position-x: 12px;
+  background-position-y: 49px;
+  background-image: url("../img/popular-6.svg");
 }
 
 
