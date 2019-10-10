@@ -548,6 +548,7 @@ img {
 }
 
 .services-list-description {
+  position: relative;
   margin: 0;
   padding: 0;
   width: 760px;
@@ -555,8 +556,19 @@ img {
   list-style: none;
 }
 
+.services-delivery::after {
+  content: "";
+  position: absolute;
+  width: 136px;
+  height: 164px;
+  top: 10px;
+  right: 68px;
+
+  background-image: url("../img/delivery.svg");
+}
+
 .partners-section {
-  margin-bottom: 80px;
+  margin-bottom: 78px;
 }
 
 .partners-list {
