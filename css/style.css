@@ -91,10 +91,6 @@ img {
   display: none;
 }
 
-.no-markers {
-  list-style: none;
-}
-
 .button {
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 18px;
@@ -130,7 +126,6 @@ img {
 
 .row {
   display: flex;
-  align-items: center;
 }
 
 .main-header .logo {
@@ -179,7 +174,6 @@ img {
 }
 
 .user-header {
-  margin-left: 252px;
   margin-right: 46px;
   width: 235px;
   margin-left: auto;
@@ -217,16 +211,13 @@ img {
   list-style: none;
 }
 
-.purchase-header {
-
-}
 .purchase-nav li {
   position: relative;
   padding-left: 30px;
 }
 
 .purchase-nav li:not(:first-child) {
-  margin-left: 31px;
+  margin-left: 36px;
 }
 
 .purchase-nav .compare-link::before {
@@ -235,7 +226,7 @@ img {
   width: 10px;
   height: 10px;
   top: 9px;
-  left: 11px;
+  left: 10px;
 
   background-image: url("../img/compare.svg");
 }
@@ -246,7 +237,7 @@ img {
   width: 12px;
   height: 12px;
   top: 8px;
-  left: 10px;
+  left: 6px;
 
   background-image: url("../img/cart.svg");
 }
@@ -281,13 +272,13 @@ img {
   list-style: none;
 }
 
-/*
-.main-nav-list li:nth-child(2) {
+
+.nav-header li:nth-child(2) {
   margin-left: auto;
   margin-right: 34px;
 }
 
-.main-nav-list li:nth-child(3) {
+.nav-header li:nth-child(3) {
   margin-right: 105px;
 }
 
@@ -295,7 +286,7 @@ img {
   position: relative;
   padding-right: 35px;
 }
-*/
+
 
 .main-nav-catalog > a::after {
   content: "";
@@ -605,7 +596,7 @@ img {
 .index-columns {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 88px;
+  margin-bottom: 86px;
   padding-top: 55px;
 }
 
@@ -628,7 +619,7 @@ img {
 
 .about-section p {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .delivery-list {
@@ -690,16 +681,20 @@ img {
 }
 
 .footer-wrapper {
+  /*
   display: flex;
   justify-content: space-between;
+  */
   padding-top: 63px;
 }
 
+/*
 .main-footer .column {
   display: flex;
   flex-direction: column;
   flex-grow: 0;
 }
+
 
 .main-footer .column:first-child {
   align-items: flex-start;
@@ -718,14 +713,24 @@ img {
   width: 360px;
 }
 
+
 .main-footer ul {
   display: flex;
   padding: 0;
   width: inherit;
 }
+*/
 
 .main-footer .logo {
   margin-bottom: 21px;
+}
+
+.user-footer {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 46px;
+  width: 235px;
+  margin-left: auto;
 }
 
 .nav-footer {
