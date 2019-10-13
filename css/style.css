@@ -48,17 +48,10 @@ body {
   color: #464646;
 
   background-color: #ffffff;
-
-
   background-image: url("../img/1device-index.jpg");
 
   background-position: top center;
   background-repeat: no-repeat;
-
-  /*
-    background-image: url("../img/1device-catalog.jpg");
-  */
-
 }
 
 a {
@@ -133,9 +126,7 @@ img {
   padding: 20px 60px 0px;
   margin: 0 auto;
 
-/*
   background: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
-*/
 }
 
 .row {
@@ -299,15 +290,21 @@ img {
 }
 
 .main-nav-sublist {
+  box-sizing: content-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  align-content: flex-start;
   position: absolute;
   margin: 0;
   padding: 0;
+  padding-right: 480px;
+  padding-left: 60px;
   width: 620px;
+  min-height: 143px;
   top: 45px;
+  left: -60px;
   z-index: 1;
 
   font-family: "Open Sans", "Trebuchet MS", sans-serif;
@@ -319,9 +316,8 @@ img {
   text-transform: none;
 
   list-style: none;
-/*
+
   background-color: #f7e296;
-  */
 }
 
 .main-nav-sublist li {
@@ -340,7 +336,8 @@ img {
 }
 
 .main-nav-sublist li:nth-child(6) {
-  flex-basis: 350px;
+  flex-basis: 450px;
+  flex-basis: 220px;
   flex-shrink: 1;
 }
 
@@ -383,9 +380,8 @@ img {
 .promo-section {
   position: relative;
   margin-bottom: 95px;
-/*
+
   background: linear-gradient(to bottom, #f7e296 110px, #ffffff 110px);
-*/
 }
 
 .promo-section::before {
@@ -403,6 +399,7 @@ img {
   padding-top: 77px;
   width: 560px;
   min-height: 495px;
+  z-index: 1;
 }
 
 .promo-product {
@@ -423,7 +420,7 @@ img {
   color: #ffffff;
 }
 
-.promo-section h3 {
+.promo-description h3 {
   margin: 0;
   margin-bottom: 19px;
   padding: 0;
@@ -435,7 +432,7 @@ img {
   color: #000000;
 }
 
-.promo-section p {
+.promo-description p {
   margin: 0;
   margin-bottom: 43px;
   padding: 0;
@@ -447,6 +444,20 @@ img {
   width: 560px;
 
   text-align: center;
+}
+
+.promo-1 .promo-image {
+  margin-right: 38px;
+}
+
+.promo-2 .promo-image {
+  margin-right: 31px;
+  margin-top: 10px;
+}
+
+.promo-3 .promo-image {
+  margin-top: 63px;
+  margin-right: 26px;
 }
 
 .promo-description .button {
