@@ -48,11 +48,9 @@ body {
   color: #464646;
 
   background-color: #ffffff;
-/*
-  background-image: url("../img/1device-index.jpg");
-  /*
+
+  /*background-image: url("../img/1device-index.jpg");*/
   background-image: url("../img/1device-catalog.jpg");
-*/
 
   background-position: top center;
   background-repeat: no-repeat;
@@ -124,10 +122,7 @@ img {
 
 .main-header {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 230px;
-  padding: 20px 60px 0px;
+  padding: 23px 60px 50px;
   margin: 0 auto;
 
   background: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
@@ -138,7 +133,8 @@ img {
 }
 
 .main-header .logo {
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 16px;
 }
 
 .main-header .row {
@@ -192,6 +188,10 @@ img {
 .user-nav li {
   position: relative;
   padding-left: 30px;
+}
+
+.login-link {
+  margin-right: 18px;
 }
 
 .login-link::before {
@@ -332,7 +332,7 @@ img {
   align-content: flex-start;
   position: absolute;
   margin: 0;
-  padding: 25px 480px 0 60px;
+  padding: 23px 480px 0 60px;
   width: 620px;
   min-height: 143px;
   top: 20px;
@@ -991,7 +991,7 @@ img {
   margin: 0;
 }
 
-.main-footer .adress {
+.main-footer .address {
   margin-right: 164px;
 }
 
@@ -1187,7 +1187,7 @@ catalog.html
 -------------------------------------------------
 */
 .catalog-header {
-  margin-bottom: 33px;
+  margin-bottom: 38px;
 }
 
 .catalog-page h1 {
@@ -1236,26 +1236,27 @@ catalog.html
 }
 
 .sorting-wrapper {
-  background: linear-gradient(to right, #dbdbdb 33.3%, #ebebeb 33.3%);
+  background: linear-gradient(to right, #dbdbdb 50%, #ebebeb 50%);
 }
 
 .sorting {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
+  padding-top: 19px;
   padding-bottom: 20px;
+
+  background: linear-gradient(to right, #dbdbdb 328px, #ebebeb 328px);
 }
 
 .sorting .left-column {
   width: 328px;
-  flex-shrink: 0;
 }
 
 .sorting .right-column {
   display: flex;
+  align-items: center;
   width: 832px;
-  flex-shrink: 0;
 }
 
 .sorting h2 {
@@ -1275,8 +1276,8 @@ catalog.html
 }
 
 .sorting span {
-  margin-left: auto;
-  margin-right: 60px;
+  margin-right: 40px;
+  margin-left: 73px;
   width: 160px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
@@ -1288,12 +1289,17 @@ catalog.html
   text-transform: uppercase;
 }
 
-.sorting ul {
+.sorting-type {
   display: flex;
+  align-items: center;
   padding: 0;
   margin: 0;
 
   list-style: none;
+}
+
+.sorting-type li {
+  margin-right: 30px;
 }
 
 .sorting-type a {
@@ -1314,8 +1320,35 @@ catalog.html
   opacity: 1;
 }
 
+.sorting-direction{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+
+  list-style: none;
+}
+
+.sorting-direction li {
+  margin-left: 19px;
+}
+
 .sorting-direction a {
+  display: block;
+  width: 11px;
+  height: 10px;
   opacity: 0.2;
+
+  font-size: 0;
+}
+
+.sorting-up {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23231F20' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
+}
+
+.sorting-down {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23231F20' d='M5.5 10L0 0h11'/%3E%3C/svg%3E");
 }
 
 .sorting-direction a:hover,
@@ -1336,25 +1369,42 @@ active устанавливается JS на активные варианты 
 }
 
 .catalog-columns-wrapper {
-  background: linear-gradient(to right, #efefef 33.3%, #ffffff 33.3%);
+  background: linear-gradient(to right, #efefef 50%, #ffffff 50%);
   margin-bottom: 75px;
 }
 .catalog-columns {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  background: linear-gradient(to right, #efefef 328px, #ffffff 328px);
 }
 
 .filter {
   margin: 0;
   margin-left: 59px;
   padding: 0;
+  padding-top: 82px;
   width: 210px;
+}
+.range-controls {
+  margin-bottom: 15px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #dbdbdb;
+}
+
+.range-filter {
+  width: 195px;
 }
 
 .filter fieldset {
   margin: 0;
   padding: 0;
+
   border: none;
 }
 
