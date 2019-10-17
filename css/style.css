@@ -1369,7 +1369,7 @@ active устанавливается JS на активные варианты 
 }
 
 .catalog-columns-wrapper {
-  background: linear-gradient(to right, #efefef 50%, #ffffff 50%);
+/*  background: linear-gradient(to right, #efefef 50%, #ffffff 50%);*/
   margin-bottom: 75px;
 }
 .catalog-columns {
@@ -1377,7 +1377,7 @@ active устанавливается JS на активные варианты 
   justify-content: space-between;
   flex-wrap: wrap;
 
-  background: linear-gradient(to right, #efefef 328px, #ffffff 328px);
+/*  background: linear-gradient(to right, #efefef 328px, #ffffff 328px);*/
 }
 
 .filter {
@@ -1387,8 +1387,12 @@ active устанавливается JS на активные варианты 
   padding-top: 82px;
   width: 210px;
 }
+
 .range-controls {
+  position: relative;
+  height: 41px;
   margin-bottom: 15px;
+  padding-top: 20px;
 }
 
 .range-controls .scale {
@@ -1397,8 +1401,65 @@ active устанавливается JS на активные варианты 
   background: #dbdbdb;
 }
 
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
 .range-filter {
   width: 195px;
+}
+
+.price-controls input {
+  width: 60px;
+  margin-left: 10px;
+  padding: 8px 10px;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
 }
 
 .filter fieldset {
@@ -1409,7 +1470,7 @@ active устанавливается JS на активные варианты 
 }
 
 .filter legend {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 18px;
@@ -1426,6 +1487,14 @@ active устанавливается JS на активные варианты 
 
 .filter-input:disabled + label {
   color: #a6a6a6;
+}
+
+.filter-color {
+  list-style: none;
+}
+
+.filter-bluetooth {
+  list-style: none;
 }
 
 .catalog-section {
@@ -1450,6 +1519,7 @@ active устанавливается JS на активные варианты 
 }
 
 .catalog-item {
+  position: relative;
   margin: 0;
   margin-bottom: 44px;
   width: 360px;
@@ -1483,10 +1553,17 @@ active устанавливается JS на активные варианты 
   padding: 0;
 }
 
+.catalog-item:hover .item-buttons {
+  display: block;
+}
+
 .item-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 .item-buttons a {
