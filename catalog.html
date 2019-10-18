@@ -18,7 +18,7 @@
         <form class="site-search"  action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="site-search">Поиск по сайту</label>
           <input class="site-search-input" type="search" id="site-search" placeholder="Поиск по сайту">
-          <button type="submit" name="find">Найти</button>
+          <button class="visually-hidden" type="submit" name="find">Найти</button>
         </form>
         <ul class="user-nav user-header no-markers">
           <li>
@@ -126,7 +126,7 @@
         <div class="catalog-columns container">
           <section class="filter">
             <form action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="field-cost">
+              <fieldset>
                 <legend>Стоимость</legend>
                 <div class="range-filter">
                   <div class="range-controls">
@@ -161,13 +161,13 @@
                     <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="color" id="color-red" value="red" checked>
                     <label for="color-red">Красный</label>
                   </li>
-                  <li>
+                  <li class="filter-option">
                     <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="color" id="color-pink" value="pink">
                     <label for="color-pink">Розовый</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset>
+              <fieldset class="field-bluetooth">
                 <legend>Bluetooth</legend>
                 <ul class="filter-bluetooth">
                   <li class="filter-option">
