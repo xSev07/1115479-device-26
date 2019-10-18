@@ -1455,6 +1455,13 @@ active устанавливается JS на активные варианты 
   text-align: right;
 }
 
+.filter ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
 .filter fieldset {
   margin: 0;
   padding: 0;
@@ -1490,23 +1497,25 @@ active устанавливается JS на активные варианты 
   color: #a6a6a6;
 }
 
-.field-color legend {
+.filter legend {
   margin-bottom: 15px;
 }
 
-.filter-color {
-  padding: 0;
-  margin: 0;
-
-  list-style: none;
+.filter-option {
+  margin-bottom: 2px;
+  padding-left: 45px;
+  
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
 }
 
-.filter-color input[type="checkbox"] {
-  /*display: none;*/
-}
+.filter-option label {
+  position: relative;
 
-.filter-bluetooth {
-  list-style: none;
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
 }
 
 .catalog-section {
