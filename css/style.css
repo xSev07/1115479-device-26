@@ -50,10 +50,10 @@ body {
   background-color: #ffffff;
 
   /*background-image: url("../img/1device-index.jpg");*/
-  /*background-image: url("../img/1device-catalog.jpg");*/
+  background-image: url("../img/1device-catalog.jpg");
 
-  /*background-position: top center;*/
-  /*background-repeat: no-repeat;*/
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -66,7 +66,7 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -704,7 +704,8 @@ img {
   width: 160px;
 }
 
-.services-list .button.active {
+.services-list .button.active,
+.services-list .button:active {
   width: 278px;
 
   text-align: left;
@@ -1141,6 +1142,15 @@ img {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='55' viewBox='0 0 55 55'%3E%3Cpath fill='%23F0C52E' d='M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z'/%3E%3C/svg%3E");
 }
 
+.modal-close:hover,
+.modal-close:focus {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.3;
+}
+
 .write-us input::placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
@@ -1223,6 +1233,10 @@ catalog.html
   padding-right: 25px;
 }
 
+.breadcrumbs li:last-child {
+  opacity: 0.3;
+}
+
 .breadcrumbs li:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -1233,6 +1247,19 @@ catalog.html
   right: 5px;
 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7' viewBox='0 0 4 7'%3E%3Cpath d='M3.83 3.132L.861.144a.5.5 0 0 0-.713 0 .508.508 0 0 0 0 .718l2.611 2.629L.148 6.12a.51.51 0 0 0 0 .72.5.5 0 0 0 .713 0L3.83 3.852a.51.51 0 0 0 .147-.36.507.507 0 0 0-.147-.36z'/%3E%3C/svg%3E");
+}
+
+.breadcrumbs a {
+   opacity: 0.3;
+ }
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+   opacity: 0.6;
+ }
+
+.breadcrumbs a:focus {
+  opacity: 0.1;
 }
 
 .sorting-wrapper {
@@ -1404,6 +1431,8 @@ active устанавливается JS на активные варианты 
 }
 
 .filter legend {
+  position: relative;
+  margin-bottom: 15px;
   margin-left: 5px;
   padding-top: 12px;
 
@@ -1417,8 +1446,8 @@ active устанавливается JS на активные варианты 
 .filter legend::before {
   content: "";
   position: absolute;
-  top: -51px;
-  left: 5px;
+  top: 0;
+  left: 0;
   width: 201px;
   height: 2px;
 
@@ -1473,6 +1502,13 @@ active устанавливается JS на активные варианты 
   left: 0px;
 }
 
+.range-controls .toggle-min:active,
+.range-controls .toggle-max:active{
+  border-width: 9px;
+  padding: 3px;
+  transform: translate(-2px, -2px);
+}
+
 .range-controls .toggle-max {
   left: 113px;
 }
@@ -1514,8 +1550,16 @@ active устанавливается JS на активные варианты 
   color: #a6a6a6;
 }
 
-.filter legend {
-  margin-bottom: 15px;
+.filter-input:hover + label:before,
+.filter-input:hover + label:after,
+.filter-input:focus + label:before,
+.filter-input:focus + label:after {
+  opacity: 0.6;
+}
+
+.filter-input:checked:active + label:before,
+.filter-input:checked:active + label:after {
+  opacity: 1;
 }
 
 .filter-option {
@@ -1644,6 +1688,26 @@ active устанавливается JS на активные варианты 
   padding: 0;
 }
 
+.catalog-item.new-item:before {
+  content: "New";
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  padding-top: 18px;
+  padding-left: 14px;
+
+  border: 2px solid #d7d7d7;
+  border-radius: 50%;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #bfbfbf;
+  text-transform: uppercase;
+}
+
 .item-buttons {
   display: none;
   position: absolute;
@@ -1652,7 +1716,7 @@ active устанавливается JS на активные варианты 
   z-index: 1;
 
   width: 360px;
-  height: 385px;
+  height: 380px;
   padding-top: 171px;
   padding-left: 81px;
 
@@ -1700,7 +1764,7 @@ active устанавливается JS на активные варианты 
   padding: 0 15px;
   width: 760px;
 
-  /*background-color: #ebebeb;*/
+  background-color: #ebebeb;
 
   text-transform: uppercase;
   list-style: none;
