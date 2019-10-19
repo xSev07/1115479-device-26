@@ -50,10 +50,10 @@ body {
   background-color: #ffffff;
 
   /*background-image: url("../img/1device-index.jpg");*/
-  background-image: url("../img/1device-catalog.jpg");
+  /*background-image: url("../img/1device-catalog.jpg");*/
 
-  background-position: top center;
-  background-repeat: no-repeat;
+  /*background-position: top center;*/
+  /*background-repeat: no-repeat;*/
 }
 
 a {
@@ -354,7 +354,7 @@ img {
 
 .main-nav-sublist li {
   display: block;
-  flex-basis: 180px;
+  flex-basis: 185px;
 }
 
 .main-nav-sublist li:nth-child(2) {
@@ -364,7 +364,7 @@ img {
 
 .main-nav-sublist li:nth-child(5) {
   margin-right: auto;
-  margin-left: 60px;
+  margin-left: 45px;
 }
 
 .main-nav-sublist li:nth-child(6) {
@@ -414,6 +414,8 @@ img {
   margin-bottom: 95px;
 
   background: linear-gradient(to bottom, #f7e296 110px, #ffffff 110px);
+
+  counter-reset: promo;
 }
 
 .promo-section::before {
@@ -440,6 +442,8 @@ img {
 }
 
 .promo-product::before {
+  counter-increment: promo;
+  content: "0" counter(promo);
   content: attr(data-number);
   position: absolute;
   top: -17px;
@@ -1547,19 +1551,31 @@ active устанавливается JS на активные варианты 
 }
 
 .filter-input:disabled + label {
-  color: #a6a6a6;
+  opacity: 0.25;
 }
 
-.filter-input:hover + label:before,
-.filter-input:hover + label:after,
-.filter-input:focus + label:before,
-.filter-input:focus + label:after {
+.filter-input:hover:not(:disabled) + label::before,
+.filter-input:hover:not(:disabled) + label::after,
+.filter-input:focus:not(:disabled) + label::before,
+.filter-input:focus:not(:disabled) + label::after {
   opacity: 0.6;
 }
 
-.filter-input:checked:active + label:before,
-.filter-input:checked:active + label:after {
+.filter-input:active:not(:disabled) + label::before {
   opacity: 1;
+}
+
+.filter-input:active:not(:disabled) + label::after {
+  display: block;
+  opacity: 1;
+}
+
+.filter-input:checked:active:not(:disabled) + label::before {
+  opacity: 1;
+}
+
+.filter-input:checked:active:not(:disabled) + label::after {
+  display: none;
 }
 
 .filter-option {
@@ -1580,8 +1596,9 @@ active устанавливается JS на активные варианты 
   background-position: 0 0;
 }
 
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox + label::after {
   content: "";
+  display: none;
   position: absolute;
   top: 10px;
   left: -41px;
@@ -1592,6 +1609,10 @@ active устанавливается JS на активные варианты 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::after {
+  display: block;
 }
 
 .filter-input-radio + label::before {
@@ -1608,6 +1629,7 @@ active устанавливается JS на активные варианты 
 
 .filter-input-radio:checked + label::after {
   content: "";
+  display: none;
   position: absolute;
   top: 7px;
   left: -41px;
@@ -1616,6 +1638,10 @@ active устанавливается JS на активные варианты 
   height: 25px;
 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Ccircle cx='12.5' cy='12.5' r='4.5'/%3E%3C/svg%3E");
+}
+
+.filter-input-radio:checked + label::after {
+  display: block;
 }
 
 .filter-option label {
@@ -1761,7 +1787,7 @@ active устанавливается JS на активные варианты 
   margin: 0;
   margin-top: -6px;
   margin-left: auto;
-  padding: 0 15px;
+  padding: 0;
   width: 760px;
 
   background-color: #ebebeb;
@@ -1790,6 +1816,27 @@ active устанавливается JS на активные варианты 
 
 .pagination .prev-button {
   margin-right: auto;
+}
+
+.prev-button a,
+.next-button a {
+  padding: 23px 30px;
+}
+
+.prev-button a:hover,
+.prev-button a:focus,
+.next-button a:hover,
+ .next-button a:focus {
+   background-color: #d9d9d9;
+ }
+
+.next-button a:active,
+.next-button a:active {
+  color: #979797;
+}
+
+.pagination .prev-button {
+  margin-left: 0;
 }
 
 .pagination .next-button {
