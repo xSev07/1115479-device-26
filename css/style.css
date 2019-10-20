@@ -52,8 +52,8 @@ body {
   /*background-image: url("../img/1device-index.jpg");*/
   /*background-image: url("../img/1device-catalog.jpg");*/
 
-  /*background-position: top center;*/
-  /*background-repeat: no-repeat;*/
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -146,21 +146,25 @@ img {
 }
 
 .site-search-input {
-  padding-left: 36px;
+  padding: 7px 5px 7px 36px;
+  width: 356px;
+
   opacity: 0.3;
+
+  background-color: inherit;
+  border: none;
 }
 
-.site-search-input::before {
-  /*
+.site-search::before {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 9px;
-  left: 6px;
+  top: 8px;
+  left: 3px;
 
   background-image: url("../img/search.svg");
-  */
+  background-repeat: no-repeat;
 }
 
 .site-search-input:hover {
@@ -169,6 +173,31 @@ img {
 
 .site-search-input:focus {
   opacity: 1;
+  border-bottom: 2px solid #000000;
+}
+
+.site-search-find {
+  visibility: hidden;
+  padding: 7px 20px;
+
+  background: inherit;
+  border: 2px solid #000000;
+}
+
+.site-search-input:focus + .site-search-find{
+  visibility: visible;
+}
+
+.site-search-input:focus + .site-search-find:hover {
+  background-color: #000000;
+  color: #ffffff;
+  visibility: visible;
+}
+
+.site-search-input + .site-search-find:active {
+  visibility: visible;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .user-nav {
@@ -295,6 +324,9 @@ img {
   list-style: none;
 }
 
+.nav-header > li:not(:last-child) {
+  margin-right: 34px;
+}
 
 .nav-header > li:nth-child(2) {
   margin-left: auto;
@@ -1095,7 +1127,7 @@ img {
   opacity: 0.1;
 }
 
-.write-us {
+.modal {
   position: fixed;
   width: 960px;
   top: 50%;
@@ -1105,6 +1137,7 @@ img {
   z-index: 10;
 
   background-color: #ffffff;
+  box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
 }
 
 .write-us-form {
@@ -1118,7 +1151,7 @@ img {
 
 .write-us-item {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
   padding: 0;
   width: 360px;
 }
@@ -1127,10 +1160,13 @@ img {
   margin: 0;
   margin-bottom: 38px;
   padding: 0;
-  width: 600px;
+  width: 758px;
 }
 
 .write-us label {
+  display: block;
+  margin-bottom: 6px;
+
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -1140,22 +1176,68 @@ img {
 
 .write-us input {
   width: 360px;
-  padding: 16px 0px;
+  padding: 16px 18px;
+
+  color: #adadad;
+  font-size: 14px;
+  line-height: 18px;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.write-us textarea {
+  padding: 15px 18px 20px;
+  width: 100%;
+
+  border: none;
+  color: #adadad;
+  resize: none;
 
   background-color: #f2f2f2;
 }
 
+.write-us input:hover,
+.write-us textarea:hover {
+  background-color: #eaeaea;
+}
+
+.write-us input:focus,
+.write-us textarea:focus {
+  color: #464646;
+  background-color: #ffffff;
+  outline: #f7e296 2px solid;
+}
+
+.write-us input:focus,
+.write-us textarea:focus {
+  color: #464646;
+  background-color: #ffffff;
+  outline: #f7e296 2px solid;
+}
+
+.write-us input[type="email"]:invalid:not(:focus) {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+/* класс invalid должен добавляться для не валидных полей  */
+.write-us .invalid {
+  background-color: #f6dada;
+}
+
 .write-us .button {
   width: 200px;
-  margin-bottom: 80px;
+  margin-bottom: 78px;
 }
 
 .modal-close {
   position: absolute;
   width: 55px;
   height: 55px;
-  top: 22px;
-  right: 21px;
+  top: 20px;
+  right: 22px;
 
   font-size: 0;
 
@@ -1178,13 +1260,6 @@ img {
 .write-us input::placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
-
-.write-us textarea {
-  color: rgba(70, 70, 70, 0.4);
-
-  background-color: #f2f2f2;
-}
-
 .user-footer a {
   opacity: 0.7;
 }
@@ -1713,6 +1788,8 @@ active устанавливается JS на активные варианты 
 
 .catalog-item img {
   margin-bottom: 25px;
+  width: 360px;
+  height: 380px;
 }
 
 .catalog-item h3 {
