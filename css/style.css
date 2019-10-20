@@ -122,7 +122,7 @@ img {
 
 .main-header {
   box-sizing: border-box;
-  padding: 23px 60px 50px;
+  padding: 23px 60px 55px;
   margin: 0 auto;
 
   background: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
@@ -192,6 +192,10 @@ img {
 
 .login-link {
   margin-right: 18px;
+}
+
+.user-nav .logout-link {
+  opacity: 0.3;
 }
 
 .login-link::before {
@@ -276,6 +280,7 @@ img {
 
 .main-nav-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -332,7 +337,7 @@ img {
   align-content: flex-start;
   position: absolute;
   margin: 0;
-  padding: 23px 480px 0 60px;
+  padding: 25px 480px 0 60px;
   width: 620px;
   min-height: 143px;
   top: 20px;
@@ -444,7 +449,6 @@ img {
 .promo-product::before {
   counter-increment: promo;
   content: "0" counter(promo);
-  content: attr(data-number);
   position: absolute;
   top: -17px;
   right: 48px;
@@ -536,7 +540,8 @@ img {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  top: 310px;
+  /*top: 310px;*/
+  bottom: 155px;
   right: 79px;
   width: 82px;
 
@@ -964,7 +969,7 @@ img {
 .user-footer {
   display: flex;
   flex-direction: row-reverse;
-  margin-right: 33px;
+  margin-right: 15px;
   width: 235px;
   margin-left: auto;
 }
@@ -983,6 +988,7 @@ img {
 
 .footer-wrapper .row:nth-child(2) {
   margin-bottom: 63px;
+  align-items: center;
 }
 
 .nav-footer {
@@ -997,15 +1003,20 @@ img {
 }
 
 .main-footer .address {
-  margin-right: 164px;
+  width: 280px;
+  margin-right: 87px;
 }
 
 .nav-footer li:not(:last-child) {
+  margin-top: 5px;
   margin-right: 34px;
 }
 
 .main-footer .phone{
+  width: 280px;
   margin-left: auto;
+
+  text-align: right;
 }
 
 .footer-wrapper .row:last-child {
@@ -1024,8 +1035,9 @@ img {
 
 .social-list {
   display: flex;
-  margin: 0 auto;
-  margin-bottom: 5px;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-left: auto;
   padding: 0;
   width: 160px;
 
@@ -1033,7 +1045,8 @@ img {
 }
 
 .social-list li {
-  margin-left: 23px;
+  margin-bottom: 5px;
+  margin-left: 21px;
 }
 
 .social-list a {
@@ -1059,9 +1072,16 @@ img {
 }
 
 .copyright {
+  margin-left: auto;
+}
+
+.copyright-academy {
+  display: block;
   width: 27px;
   height: 34px;
+
   font-size: 0;
+
   background-image: url("../img/logo-html.svg");
   background-repeat: no-repeat;
 }
@@ -1206,7 +1226,7 @@ catalog.html
 
 .catalog-page h1 {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 47px;
@@ -1401,7 +1421,7 @@ active устанавливается JS на активные варианты 
 
 .catalog-columns-wrapper {
   background: linear-gradient(to right, #efefef 50%, #ffffff 50%);
-  margin-bottom: 77px;
+  margin-bottom: 78px;
 }
 .catalog-columns {
   display: flex;
@@ -1429,14 +1449,19 @@ active устанавливается JS на активные варианты 
 .filter fieldset {
   position: relative;
   margin: 0;
+  margin-bottom: 34px;
   padding: 0;
 
   border: none;
 }
 
+.filter fieldset:first-child {
+  margin-bottom: 25px;
+}
+
 .filter legend {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   margin-left: 5px;
   padding-top: 12px;
 
@@ -1536,14 +1561,6 @@ active устанавливается JS на активные варианты 
 
 .max-price {
   text-align: right;
-}
-
-.filter fieldset {
-  margin-bottom: 34px;
-}
-
-.filter fieldset:first-child {
-  margin-bottom: 26px;
 }
 
 .field-cost legend {
@@ -1784,6 +1801,8 @@ active устанавливается JS на активные варианты 
 
 .pagination {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   margin-top: -6px;
   margin-left: auto;
@@ -1815,7 +1834,9 @@ active устанавливается JS на активные варианты 
 }
 
 .pagination .prev-button {
+  max-width: 137px;
   margin-right: auto;
+  margin-left: 0;
 }
 
 .prev-button a,
@@ -1835,11 +1856,8 @@ active устанавливается JS на активные варианты 
   color: #979797;
 }
 
-.pagination .prev-button {
-  margin-left: 0;
-}
-
 .pagination .next-button {
+  max-width: 137px;
   margin-left: auto;
 }
 
@@ -1849,4 +1867,13 @@ active устанавливается JS на активные варианты 
 
 .hidden {
   display: none;
+}
+
+.slider-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+.catalog-footer .user-footer {
+  margin-right: 34px;
 }
