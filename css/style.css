@@ -1421,12 +1421,12 @@ active устанавливается JS на активные варианты 
 
 .catalog-columns-wrapper {
   background: linear-gradient(to right, #efefef 50%, #ffffff 50%);
-  margin-bottom: 78px;
 }
 .catalog-columns {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-bottom: 78px;
 
   background: linear-gradient(to right, #efefef 328px, #ffffff 328px);
 }
