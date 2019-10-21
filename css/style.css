@@ -184,7 +184,7 @@ img {
   border: 2px solid #000000;
 }
 
-.site-search-input:focus + .site-search-find{
+.site-search-input:focus + .site-search-find {
   visibility: visible;
 }
 
@@ -691,7 +691,6 @@ img {
 .services-section {
   position: relative;
   display: flex;
-  justify-content: space-between;
   padding-top: 80px;
 }
 
@@ -719,6 +718,7 @@ img {
   flex-direction: column;
   margin: 0;
   margin-top: 6px;
+  margin-right: 118px;
   padding: 0;
   padding-right: 8px;
   width: 284px;
@@ -1753,7 +1753,7 @@ active устанавливается JS на активные варианты 
 .catalog-section {
   display: flex;
   width: 760px;
-  margin-bottom: -6px;
+  margin-bottom: -12px;
 }
 
 .items-list {
@@ -1881,7 +1881,6 @@ active устанавливается JS на активные варианты 
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: -6px;
   margin-left: auto;
   padding: 0;
   width: 760px;
