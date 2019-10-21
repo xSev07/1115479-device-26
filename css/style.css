@@ -151,7 +151,7 @@ img {
 
   opacity: 0.3;
 
-  background-color: inherit;
+  background: none;
   border: none;
 }
 
@@ -174,13 +174,15 @@ img {
 .site-search-input:focus {
   opacity: 1;
   border-bottom: 2px solid #000000;
+  outline: none;
+  box-shadow: none;
 }
 
 .site-search-find {
   visibility: hidden;
   padding: 7px 20px;
 
-  background: inherit;
+  background: none;
   border: 2px solid #000000;
 }
 
@@ -1296,12 +1298,12 @@ catalog.html
 -------------------------------------------------
 */
 .catalog-header {
-  margin-bottom: 38px;
+  margin-bottom: 32px;
 }
 
 .catalog-page h1 {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 47px;
@@ -1647,9 +1649,7 @@ active устанавливается JS на активные варианты 
 }
 
 .filter-input:hover:not(:disabled) + label::before,
-.filter-input:hover:not(:disabled) + label::after,
-.filter-input:focus:not(:disabled) + label::before,
-.filter-input:focus:not(:disabled) + label::after {
+.filter-input:focus:not(:disabled) + label::before {
   opacity: 0.6;
 }
 
@@ -1657,21 +1657,8 @@ active устанавливается JS на активные варианты 
   opacity: 1;
 }
 
-.filter-input:active:not(:disabled) + label::after {
-  display: block;
-  opacity: 1;
-}
-
 .filter-input:checked:active:not(:disabled) + label::before {
   opacity: 1;
-}
-
-.filter-input:checked:active:not(:disabled) + label::after {
-  display: none;
-}
-
-.filter-option {
-  padding-left: 45px;
 }
 
 .filter-input-checkbox + label::before {
@@ -1680,31 +1667,28 @@ active устанавливается JS на активные варианты 
   top: 10px;
   left: -41px;
 
-  width: 23px;
-  height: 23px;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.filter-input-checkbox + label::after {
-  content: "";
-  display: none;
-  position: absolute;
-  top: 10px;
-  left: -41px;
-
   width: 27px;
   height: 23px;
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3C/svg%3E");
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.filter-input-checkbox:checked + label::after {
-  display: block;
+.filter-input-checkbox:checked + label::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input-checkbox:active:not(:disabled) + label::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input-checkbox:checked:active:not(:disabled) + label::before {
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.filter-option {
+  padding-left: 45px;
 }
 
 .filter-input-radio + label::before {
@@ -1716,24 +1700,11 @@ active устанавливается JS на активные варианты 
   width: 25px;
   height: 25px;
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3C/svg%3E");
+  background-image: url("../img/radio-off.svg");
 }
 
-.filter-input-radio:checked + label::after {
-  content: "";
-  display: none;
-  position: absolute;
-  top: 7px;
-  left: -41px;
-
-  width: 25px;
-  height: 25px;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Ccircle cx='12.5' cy='12.5' r='4.5'/%3E%3C/svg%3E");
-}
-
-.filter-input-radio:checked + label::after {
-  display: block;
+.filter-input-radio:checked + label::before {
+  background-image: url("../img/radio-on.svg");
 }
 
 .filter-option label {
@@ -1811,12 +1782,12 @@ active устанавливается JS на активные варианты 
 .catalog-item.new-item:before {
   content: "New";
   position: absolute;
-  top: 29px;
+  top: 27px;
   right: 27px;
   width: 60px;
   height: 60px;
-  padding-top: 18px;
-  padding-left: 14px;
+  padding-top: 16px;
+  padding-left: 13px;
 
   border: 2px solid #d7d7d7;
   border-radius: 50%;
