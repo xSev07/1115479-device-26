@@ -5,7 +5,6 @@
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="/css/outline.css">
   </head>
   <body>
     <header class="main-header container">
@@ -81,7 +80,7 @@
       <h1 class="visually-hidden">Девайс</h1>
       <section class="promo-section container">
         <h2 class="visually-hidden">Промо товары</h2>
-        <article class="promo-product promo-1">
+        <article class="promo-product promo-1 active">
           <div class="promo-image">
             <img src="img/slider-1.png" alt="Изображение товара" width="384" height="486">
           </div>
@@ -104,7 +103,7 @@
             </table>
           </div>
         </article>
-        <article class="promo-product promo-2 slider-hidden">
+        <article class="promo-product promo-2">
           <div class="promo-image">
             <img src="img/slider-2.png" alt="Изображение товара" width="345" height="485">
           </div>
@@ -123,7 +122,7 @@
             </table>
           </div>
         </article>
-        <article class="promo-product promo-3 slider-hidden">
+        <article class="promo-product promo-3">
           <div class="promo-image">
             <img src="img/slider-3.png" alt="Изображение товара" width="526" height="334">
           </div>
@@ -184,17 +183,17 @@
           <h2 class="visually-hidden">Сервисы</h2>
           <ul class="services-list">
             <li>
-              <button class="button active" type="button">Доставка</button>
+              <button class="services-button button active" type="button">Доставка</button>
             </li>
             <li>
-              <button class="button" type="button">Гарантия</button>
+              <button class="services-button button" type="button">Гарантия</button>
             </li>
             <li>
-              <button class="button" type="button">Кредит</button>
+              <button class="services-button button" type="button">Кредит</button>
             </li>
           </ul>
           <ul class="services-list-description">
-            <li>
+            <li class="services-item active">
               <section class="services-delivery">
                 <h3>Доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду
@@ -202,14 +201,14 @@
                   на ваш этаж.</p>
               </section>
             </li>
-            <li class="hidden">
+            <li class="services-item">
               <section class="services-warranty">
                 <h3>Гарантия</h3>
                 <p>Если из-за возгорания купленного у нас товара у вас сгорит дом —
                   не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
               </section>
             </li>
-            <li class="hidden">
+            <li class="services-item">
               <section class="services-credit">
                 <h3>Кредит</h3>
                 <p>Залезть в долговую яму стало проще! Кредитные консультанты

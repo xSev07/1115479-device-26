@@ -88,10 +88,41 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+var switchSlide = function (sliderSlides, sliderControlList, slideNumber) {
+  for (var i = 0; i < sliderControlList.length; i++) {
+    if (sliderControlList[i].classList.contains("active")) {
+      sliderControlList[i].classList.remove("active");
+      sliderSlides[i].classList.remove("active");
+    }
+  }
+  sliderControlList[slideNumber].classList.add("active");
+  sliderSlides[slideNumber].classList.add("active");
+}
+
 var sliderControls = document.querySelectorAll(".slider-button");
-for (var i = 0; i < sliderControls.length; i++) {
-  sliderControls[i].addEventListener("click", function (evt) {
-    console.log("click");
-    sliderControls[i].classList.add("active");
+var promoProducts = document.querySelectorAll(".promo-product")
+
+var sliderControlClickHandler = function (slideNumber) {
+  sliderControls[slideNumber].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    switchSlide(promoProducts, sliderControls, slideNumber);
   })
+}
+
+for (var i = 0; i < sliderControls.length; i++) {
+  sliderControlClickHandler(i);
+}
+
+var servicesControls = document.querySelectorAll(".services-button");
+var servicesList = document.querySelectorAll(".services-item");
+
+var servicesControlClickHandler = function (slideNumber) {
+  servicesControls[slideNumber].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    switchSlide(servicesList, servicesControls, slideNumber);
+  })
+}
+
+for (var i = 0; i < sliderControls.length; i++) {
+  servicesControlClickHandler(i);
 }
