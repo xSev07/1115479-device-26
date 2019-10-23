@@ -48,12 +48,6 @@ body {
   color: #464646;
 
   background-color: #ffffff;
-
-  /*background-image: url("../img/1device-index.jpg");*/
-  /*background-image: url("../img/1device-catalog.jpg");*/
-
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 a {
@@ -134,7 +128,7 @@ img {
 
 .main-header .logo {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .main-header .row {
@@ -209,6 +203,7 @@ img {
 
 .user-nav {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 
@@ -258,6 +253,7 @@ img {
 
 .purchase-nav {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 
@@ -381,7 +377,7 @@ img {
   min-height: 143px;
   top: 18px;
   left: -60px;
-  z-index: 1;
+  z-index: 2;
 
   font-family: "Open Sans", "Trebuchet MS", sans-serif;
   font-size: 15px;
@@ -599,10 +595,6 @@ img {
   list-style: none;
 }
 
-.slider-controls li {
-  /*margin-right: 21px*/
-}
-
 .slider-button {
   width: 12px;
   height: 12px;
@@ -656,18 +648,36 @@ img {
   top: 0;
   left: 0;
 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular-list a::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: 160px;
+  height: 160px;
+  top: 0;
+  left: 0;
+
   background-color: #f7e296;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.popular-list a:hover::before,
-.popular-list a:focus::before {
+.popular-list a:hover::after,
+.popular-list a:focus::after {
     background-color: #f0c52e;
 }
 
-.popular-list a:active {
+.popular-list a:active::before {
     opacity: 0.3;
+}
+
+.popular-list a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .popular-list .popular-virtual::before {
@@ -841,22 +851,12 @@ img {
   list-style: none;
 }
 
-
 .partners-list a {
   position: relative;
   display: block;
   width: 260px;
   height: 100px;
 }
-
-/*
-.partners-list a:hover {
-  display: block;
-  height: 100px;
-  font-size: 0px;
-  text-decoration: none;
-}
-*/
 
 .partners-list a:hover::before {
   content: "";
@@ -896,8 +896,7 @@ img {
 
 .about-section {
   flex-shrink: 0;
-
-  width: 462px; /*495 влазят строки, но колонка не по макету*/
+  width: 462px;
 }
 
 .about-section::before {
@@ -1004,6 +1003,11 @@ img {
   margin-left: 2px;
 }
 
+.modal-map {
+  font-size: 0;
+  line-height: 0;
+}
+
 .modal-map iframe {
   position: relative;
   z-index: 2;
@@ -1015,15 +1019,15 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-
   margin: 0;
+  z-index: 1;
 }
 
 .main-footer {
   padding-bottom: 65px;
 
   color: #ffffff;
+
   background-color: #464646;
 }
 
@@ -1046,6 +1050,7 @@ img {
 
 .main-footer .logo {
   padding-top: 2px;
+  margin-right: 10px;
 }
 
 .user-footer {
@@ -1184,8 +1189,6 @@ img {
   top: 150px;
   left: 50%;
   margin-left: -480px;
-
-  /*transform: translate(-50%, -50%);*/
   z-index: 10;
 
   background-color: #ffffff;
@@ -1249,11 +1252,14 @@ img {
 }
 
 .write-us textarea {
-  padding: 15px 18px 20px;
+  padding: 15px 19px 16px;
   width: 100%;
+  height: 156px;
 
   border: none;
   color: #adadad;
+  font-size: 14px;
+  line-height: 18px;
   resize: none;
 
   background-color: #f2f2f2;
@@ -1267,12 +1273,14 @@ img {
 .write-us input:focus,
 .write-us textarea:focus {
   color: #464646;
+
   background-color: #ffffff;
   outline: #f7e296 2px solid;
 }
 
 write-us-input:focus {
   color: #464646;
+
   background-color: #ffffff;
   outline: #f7e296 2px solid;
 }
@@ -1352,11 +1360,6 @@ write-us-input:focus {
   opacity: 0.3;
 }
 
-/*
------------------------------------------------
-catalog.html
--------------------------------------------------
-*/
 .catalog-header {
   margin-bottom: 32px;
 }
@@ -1380,7 +1383,7 @@ catalog.html
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 48px;
   padding: 0;
 
   font-size: 14px;
@@ -1451,9 +1454,8 @@ catalog.html
 .sorting h2 {
   margin: 0;
   padding: 0;
-  margin-left: 59px;
+  margin-left: 61px;
   width: 210px;
-
 
   font-family: "Gilroy", "Arial Black", sans-serif;
   font-size: 16px;
@@ -1466,7 +1468,7 @@ catalog.html
 
 .sorting span {
   margin-right: 40px;
-  margin-left: 73px;
+  margin-left: 74px;
   width: 160px;
 
   font-family: "Gilroy", "Arial Black", sans-serif;
@@ -1770,7 +1772,6 @@ active устанавливается JS на активные варианты 
 
 .filter-option label {
   position: relative;
-
   display: block;
 
   cursor: pointer;
@@ -1848,7 +1849,7 @@ active устанавливается JS на активные варианты 
   width: 60px;
   height: 60px;
   padding-top: 16px;
-  padding-left: 13px;
+  padding-left: 14px;
 
   border: 2px solid #d7d7d7;
   border-radius: 50%;

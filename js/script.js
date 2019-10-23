@@ -25,7 +25,7 @@ writeUsLink.addEventListener("click", function (evt) {
       userName.value = storage;
       email.value = localStorage.getItem("email");
   } else {
-    userName.focus();
+    setTimeout(function () {userName.focus();}, 500);
   }
 });
 
