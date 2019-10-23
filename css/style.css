@@ -134,26 +134,24 @@ img {
 
 .main-header .logo {
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 9px;
 }
 
 .main-header .row {
-  margin-bottom: 36px;
+  margin-bottom: 29px;
   align-items: center;
-  min-height: 38px;
 }
 
 .site-search {
   display: flex;
   align-items: flex-end;
   position: relative;
-  min-height: 34px;
 }
 
 .site-search-input {
-  padding: 7px 5px 5px 39px;
+  padding: 0px 5px 5px 39px;
   width: 356px;
-  height: 100%;
+  height: 45px;
 
   opacity: 0.3;
 
@@ -166,7 +164,7 @@ img {
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 11px;
+  top: 17px;
   left: 4px;
 
   background-image: url("../img/search.svg");
@@ -186,7 +184,7 @@ img {
 
 .search-button {
   visibility: hidden;
-  padding: 7px 20px;
+  padding: 14px 18px;
   height: 100%;
 
   background: none;
@@ -1380,6 +1378,7 @@ catalog.html
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 46px;
   padding: 0;
